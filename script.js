@@ -1,3 +1,19 @@
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  document.documentElement.classList.add('theme-transitioning');
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  setTimeout(() => {
+    document.documentElement.classList.remove('theme-transitioning');
+  }, 500);
+});
+
 // ===== Cursor glow =====
 const cursorGlow = document.createElement('div');
 cursorGlow.classList.add('cursor-glow');
@@ -295,10 +311,17 @@ if (keywordsContainer) {
     el.style.animationDelay = '0s';
     el.style.fontSize = (0.6 + Math.random() * 0.3) + 'rem';
 
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     const colorRoll = Math.random();
-    if (colorRoll < 0.4) el.style.color = 'rgba(255, 255, 255, 0.15)';
-    else if (colorRoll < 0.7) el.style.color = 'rgba(255, 255, 255, 0.12)';
-    else el.style.color = 'rgba(255, 255, 255, 0.10)';
+    if (isLight) {
+      if (colorRoll < 0.4) el.style.color = 'rgba(109, 40, 217, 0.08)';
+      else if (colorRoll < 0.7) el.style.color = 'rgba(8, 145, 178, 0.07)';
+      else el.style.color = 'rgba(0, 0, 0, 0.06)';
+    } else {
+      if (colorRoll < 0.4) el.style.color = 'rgba(255, 255, 255, 0.15)';
+      else if (colorRoll < 0.7) el.style.color = 'rgba(255, 255, 255, 0.12)';
+      else el.style.color = 'rgba(255, 255, 255, 0.10)';
+    }
 
     keywordsContainer.appendChild(el);
     el.addEventListener('animationend', () => el.remove());
