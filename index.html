@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqsa Ahmed — Software Engineer & AI Researcher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AA<span class="accent">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-grid-pattern"></div>
+    <div class="hero-aurora"></div>
+    <div class="hero-orb-3"></div>
+    <div class="hero-beams"></div>
+    <canvas class="neural-canvas" id="neuralCanvas"></canvas>
+    <div class="hero-vignette"></div>
+    <!-- Floating AI keywords -->
+    <div class="floating-keywords" id="floatingKeywords"></div>
+    <div class="hero-split">
+      <!-- Left: Text Content -->
+      <div class="hero-left animate-in">
+        <div class="hero-status-bar">
+          <span class="hsb-item"><span class="hsb-dot green"></span> Available for work</span>
+          <span class="hsb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Saudi Arabia</span>
+        </div>
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">
+          <span class="glitch-wrapper">
+            <span class="glitch-text" data-text="Aqsa Ahmed">Aqsa Ahmed</span>
+          </span><span class="accent">.</span>
+        </h1>
+        <h2 class="hero-title">
+          <span class="typewriter-role" id="typewriterRole"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-description">
+          Building scalable AI systems and intelligent solutions across 3 countries.
+          Specialising in GenAI, RAG pipelines, and full-stack architecture.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/AqSa2205" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aqsa-ahmed-a906ab29b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:aqsa2205@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Avatar + Terminal Card -->
+      <div class="hero-right animate-in delay-2">
+        <div class="hero-avatar">
+          <div class="avatar-orbit">
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot d2"></div>
+            <div class="orbit-dot d3"></div>
+          </div>
+          <div class="avatar-orbit orbit-2">
+            <div class="orbit-dot"></div>
+            <div class="orbit-dot d2"></div>
+          </div>
+          <img src="profile.jpeg" alt="Aqsa Ahmed" />
+        </div>
+
+        <!-- Mini Terminal Card -->
+        <div class="hero-terminal">
+          <div class="ht-header">
+            <span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span>
+            <span class="pgrid-filename">profile.json</span>
+          </div>
+          <div class="ht-body">
+            <div class="ht-line"><span class="code-kw">"role"</span>: <span class="code-str">"Lead AI Engineer"</span>,</div>
+            <div class="ht-line"><span class="code-kw">"location"</span>: <span class="code-str">"Saudi Arabia"</span>,</div>
+            <div class="ht-line"><span class="code-kw">"company"</span>: <span class="code-str">"Leap Networks Arabia"</span>,</div>
+            <div class="ht-line"><span class="code-kw">"expertise"</span>: [<span class="code-str">"GenAI"</span>, <span class="code-str">"RAG"</span>, <span class="code-str">"Backend"</span>],</div>
+            <div class="ht-line"><span class="code-kw">"countries"</span>: <span class="code-str">3</span>,</div>
+            <div class="ht-line"><span class="code-kw">"status"</span>: <span class="ht-status"><span class="hsb-dot green"></span> "open_to_work"</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Marquee - Full Width -->
+    <div class="tech-marquee animate-in delay-5">
+      <div class="marquee-track">
+        <span>Python</span><span class="marquee-dot"></span>
+        <span>Golang</span><span class="marquee-dot"></span>
+        <span>LangChain</span><span class="marquee-dot"></span>
+        <span>RAG</span><span class="marquee-dot"></span>
+        <span>PyTorch</span><span class="marquee-dot"></span>
+        <span>Next.js</span><span class="marquee-dot"></span>
+        <span>Flutter</span><span class="marquee-dot"></span>
+        <span>Node.js</span><span class="marquee-dot"></span>
+        <span>PostgreSQL</span><span class="marquee-dot"></span>
+        <span>OpenAI</span><span class="marquee-dot"></span>
+        <span>Docker</span><span class="marquee-dot"></span>
+        <span>FastAPI</span><span class="marquee-dot"></span>
+        <span>Python</span><span class="marquee-dot"></span>
+        <span>Golang</span><span class="marquee-dot"></span>
+        <span>LangChain</span><span class="marquee-dot"></span>
+        <span>RAG</span><span class="marquee-dot"></span>
+        <span>PyTorch</span><span class="marquee-dot"></span>
+        <span>Next.js</span><span class="marquee-dot"></span>
+        <span>Flutter</span><span class="marquee-dot"></span>
+        <span>Node.js</span><span class="marquee-dot"></span>
+        <span>PostgreSQL</span><span class="marquee-dot"></span>
+        <span>OpenAI</span><span class="marquee-dot"></span>
+        <span>Docker</span><span class="marquee-dot"></span>
+        <span>FastAPI</span><span class="marquee-dot"></span>
+      </div>
+    </div>
+    <div class="scroll-indicator animate-in delay-5">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <strong>Software Engineer</strong> and <strong>AI Researcher</strong> currently
+            pursuing an <strong>MSc in Artificial Intelligence</strong> at the University of Huddersfield, UK.
+            With experience across <strong>Pakistan, the UK, and Saudi Arabia</strong>, I bring a global
+            perspective to engineering and innovation.
+          </p>
+          <p>
+            Currently serving as <strong>Lead AI Engineer</strong> at <strong>Leap Networks Arabia</strong>,
+            I architect AI-driven solutions at scale. Previously, I built cross-platform AI applications
+            at <strong>Leap Networks Global</strong> in the UK and backend systems at
+            <strong>Mangotech Solutions</strong> in Pakistan.
+          </p>
+          <p>
+            My passion lies at the intersection of software engineering and artificial intelligence —
+            from RAG systems and deep learning models to scalable microservices and real-time
+            media processing pipelines.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number" data-target="19">0</span>
+            <span class="stat-label">Public Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+      <!-- Global Journey -->
+      <div class="journey-section">
+        <h3 class="journey-heading">Global Journey</h3>
+        <div class="journey-cards">
+          <div class="jcard">
+            <div class="jcard-number">01</div>
+            <div class="jcard-flag">&#127477;&#127472;</div>
+            <h4 class="jcard-country">Pakistan</h4>
+            <p class="jcard-role">BS Software Engineering</p>
+            <p class="jcard-role">Backend Engineer &middot; Web Developer</p>
+            <span class="jcard-year">2020 — 2024</span>
+            <div class="jcard-companies">
+              <span>FAST-NUCES</span>
+              <span>Mangotech</span>
+              <span>Galaxy Pharma</span>
+            </div>
+          </div>
+          <div class="jcard-connector">
+            <div class="connector-line"></div>
+            <div class="connector-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="connector-signal"></div>
+          </div>
+          <div class="jcard">
+            <div class="jcard-number">02</div>
+            <div class="jcard-flag">&#127468;&#127463;</div>
+            <h4 class="jcard-country">United Kingdom</h4>
+            <p class="jcard-role">MSc Artificial Intelligence</p>
+            <p class="jcard-role">AI Software Engineer</p>
+            <span class="jcard-year">2024 — 2026</span>
+            <div class="jcard-companies">
+              <span>Huddersfield</span>
+              <span>Leap Networks Global</span>
+            </div>
+          </div>
+          <div class="jcard-connector">
+            <div class="connector-line"></div>
+            <div class="connector-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="connector-signal"></div>
+          </div>
+          <div class="jcard jcard-active">
+            <div class="jcard-live">Now</div>
+            <div class="jcard-number">03</div>
+            <div class="jcard-flag">&#127480;&#127462;</div>
+            <h4 class="jcard-country">Saudi Arabia</h4>
+            <p class="jcard-role">Lead AI Engineer</p>
+            <span class="jcard-year">Present</span>
+            <div class="jcard-companies">
+              <span>Leap Networks Arabia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section-alt" id="experience">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <!-- Saudi Arabia -->
+        <div class="timeline-region">
+          <span class="region-flag">&#127480;&#127462;</span>
+          <span class="region-name">Saudi Arabia</span>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker marker-current"></div>
+          <div class="timeline-content current-role">
+            <div class="current-badge">Current Role</div>
+            <div class="timeline-header">
+              <h3>Lead AI Engineer</h3>
+              <span class="timeline-company">Leap Networks Arabia</span>
+              <span class="timeline-date">Present &middot; Saudi Arabia</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Leading AI engineering initiatives and driving technical strategy across the organisation</li>
+              <li>Architecting scalable AI/ML solutions and overseeing end-to-end product development</li>
+              <li>Managing cross-functional engineering teams and mentoring junior developers</li>
+              <li>Building and deploying production AI systems for enterprise-scale applications</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>AI/ML</span><span>Python</span><span>Leadership</span><span>System Architecture</span><span>GenAI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- United Kingdom -->
+        <div class="timeline-region">
+          <span class="region-flag">&#127468;&#127463;</span>
+          <span class="region-name">United Kingdom</span>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>AI Software Engineer</h3>
+              <span class="timeline-company">Leap Networks Global</span>
+              <span class="timeline-date">Aug 2025 — 2026 &middot; Manchester, UK</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Led end-to-end design and architecture of an AI-driven, cross-platform application ensuring scalability, security, and seamless integration</li>
+              <li>Developed core backend services using Golang and Python, building high-performance APIs, automation pipelines, and inference workflows</li>
+              <li>Integrated and optimised AI/ML models using Python, improving inference performance and ensuring smooth deployment</li>
+              <li>Implemented Flutter-based cross-platform UI for mobile and web with consistent, responsive user experience</li>
+              <li>Handled advanced media processing with FFmpeg for real-time audio/video pipelines</li>
+              <li>Managed PostgreSQL schema design, query optimisation, and large-scale data handling</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Golang</span><span>Python</span><span>Flutter</span><span>PostgreSQL</span><span>FFmpeg</span><span>AI/ML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pakistan -->
+        <div class="timeline-region">
+          <span class="region-flag">&#127477;&#127472;</span>
+          <span class="region-name">Pakistan</span>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Backend Engineer</h3>
+              <span class="timeline-company">Mangotech Solutions</span>
+              <span class="timeline-date">Jan 2024 — Aug 2024 &middot; Karachi, Pakistan</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Designed Teamways CRM backend with Node.js and MongoDB — role-based access control, attendance tracking, and real-time collaboration</li>
+              <li>Engineered Handsoff CMS platform with dynamic content structures and live configuration APIs without frontend code changes</li>
+              <li>Built Fanoos event management platform with JWT auth, comprehensive event lifecycle APIs, and role-specific dashboards</li>
+              <li>Optimised database performance, reducing query response times by 40% through strategic indexing and caching</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Node.js</span><span>MongoDB</span><span>JWT</span><span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Web Developer — Intern</h3>
+              <span class="timeline-company">Galaxy Pharma Private Limited</span>
+              <span class="timeline-date">July 2023 — Nov 2023 &middot; Karachi, Pakistan</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Developed and maintained CMS platform using HTML, CSS, JavaScript, and jQuery with responsive layouts</li>
+              <li>Integrated secure payment processing with the Indolj team — order tracking, inventory management, and sales reporting</li>
+              <li>Optimised performance by refactoring legacy code, restructuring CSS architecture, and creating reusable JavaScript components</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>JavaScript</span><span>jQuery</span><span>HTML/CSS</span><span>Payment APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="pgrid pgrid-2col">
+
+        <!-- Project 1 -->
+        <a href="https://github.com/AqSa2205/query_mate" target="_blank" rel="noopener" class="pgrid-card">
+          <div class="pgrid-glow"></div>
+          <div class="pgrid-info">
+            <div class="pgrid-number">01</div>
+            <div class="pgrid-badge">AI / GenAI</div>
+            <h3>Query Mate</h3>
+            <p>AI-driven web application enabling users to interact with SQL databases using natural language. Utilises LangChain's SQL Agent with OpenAI GPT to parse inputs and auto-generate SQL commands through a NestJS backend.</p>
+            <div class="pgrid-highlights">
+              <div class="pgrid-hl"><span class="pgrid-hl-val">3x</span><span class="pgrid-hl-label">Faster Queries</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">NLP</span><span class="pgrid-hl-label">to SQL</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">GPT-4</span><span class="pgrid-hl-label">Powered</span></div>
+            </div>
+            <div class="pgrid-tech"><span>Next.js</span><span>LangChain</span><span>NestJS</span><span>MongoDB</span><span>OpenAI</span></div>
+          </div>
+          <div class="pgrid-visual">
+            <div class="pgrid-code-block">
+              <div class="pgrid-code-header"><span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span><span class="pgrid-filename">query_mate.py</span></div>
+              <pre class="pgrid-pre"><code><span class="code-kw">from</span> langchain.agents <span class="code-kw">import</span> create_sql_agent
+<span class="code-kw">from</span> langchain.llms <span class="code-kw">import</span> OpenAI
+
+<span class="code-comment"># Natural language → SQL</span>
+agent = create_sql_agent(
+    llm=OpenAI(<span class="code-str">"gpt-4"</span>),
+    db=database,
+    verbose=<span class="code-kw">True</span>
+)
+
+result = agent.run(
+    <span class="code-str">"Show top users by revenue"</span>
+)</code></pre>
+            </div>
+            <div class="pgrid-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg> View on GitHub</div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://github.com/AqSa2205/DebugXpress" target="_blank" rel="noopener" class="pgrid-card">
+          <div class="pgrid-glow glow-cyan"></div>
+          <div class="pgrid-info">
+            <div class="pgrid-number">02</div>
+            <div class="pgrid-badge">AI / RAG</div>
+            <h3>DebugXpress</h3>
+            <p>AI-powered chatbot designed to assist developers in debugging Express.js applications. Integrates Retrieval Augmented Generation technology to create a context-aware knowledge base, delivering precise solutions for common and intricate challenges.</p>
+            <div class="pgrid-highlights">
+              <div class="pgrid-hl"><span class="pgrid-hl-val">RAG</span><span class="pgrid-hl-label">Powered</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">Groq</span><span class="pgrid-hl-label">Inference</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">Vector</span><span class="pgrid-hl-label">Search</span></div>
+            </div>
+            <div class="pgrid-tech"><span>Next.js</span><span>FastAPI</span><span>Pinecone</span><span>Groq</span><span>RAG</span><span>SQLAlchemy</span></div>
+          </div>
+          <div class="pgrid-visual">
+            <div class="pgrid-code-block">
+              <div class="pgrid-code-header"><span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span><span class="pgrid-filename">debugxpress.py</span></div>
+              <pre class="pgrid-pre"><code><span class="code-kw">from</span> pinecone <span class="code-kw">import</span> Index
+<span class="code-kw">from</span> groq <span class="code-kw">import</span> Groq
+
+<span class="code-comment"># RAG-powered debug assistant</span>
+context = vectordb.similarity_search(
+    query=<span class="code-str">"TypeError in middleware"</span>,
+    k=<span class="code-kw">5</span>
+)
+response = llm.chat(
+    messages=context,
+    model=<span class="code-str">"mixtral-8x7b"</span>
+)</code></pre>
+            </div>
+            <div class="pgrid-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg> View on GitHub</div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/AqSa2205/Intelligent_Document_RAG_System" target="_blank" rel="noopener" class="pgrid-card">
+          <div class="pgrid-glow glow-pink"></div>
+          <div class="pgrid-info">
+            <div class="pgrid-number">03</div>
+            <div class="pgrid-badge">AI / GenAI</div>
+            <h3>Intelligent Document RAG System</h3>
+            <p>Sophisticated Retrieval-Augmented Generation system enabling natural language querying of PDF documents. Implemented vector storage using ChromaDB with semantic search capabilities and support for multiple embedding providers including Ollama and AWS Bedrock.</p>
+            <div class="pgrid-highlights">
+              <div class="pgrid-hl"><span class="pgrid-hl-val">Multi</span><span class="pgrid-hl-label">Provider</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">PDF</span><span class="pgrid-hl-label">Parsing</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">Auto</span><span class="pgrid-hl-label">Testing</span></div>
+            </div>
+            <div class="pgrid-tech"><span>Python</span><span>LangChain</span><span>ChromaDB</span><span>Ollama</span><span>AWS Bedrock</span></div>
+          </div>
+          <div class="pgrid-visual">
+            <div class="pgrid-code-block">
+              <div class="pgrid-code-header"><span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span><span class="pgrid-filename">rag_system.py</span></div>
+              <pre class="pgrid-pre"><code><span class="code-kw">from</span> langchain <span class="code-kw">import</span> RetrievalQA
+<span class="code-kw">from</span> chromadb <span class="code-kw">import</span> Client
+
+<span class="code-comment"># PDF → Vectors → Answers</span>
+docs = loader.load(<span class="code-str">"report.pdf"</span>)
+chunks = splitter.split(docs)
+vectorstore.add_documents(chunks)
+
+qa = RetrievalQA.from_chain_type(
+    llm=bedrock,
+    retriever=vectorstore.as_retriever()
+)</code></pre>
+            </div>
+            <div class="pgrid-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg> View on GitHub</div>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://github.com/AqSa2205" target="_blank" rel="noopener" class="pgrid-card">
+          <div class="pgrid-glow"></div>
+          <div class="pgrid-info">
+            <div class="pgrid-number">04</div>
+            <div class="pgrid-badge badge-award">Research &middot; Award-Winning</div>
+            <h3>RIS-Enhanced 6G Networks</h3>
+            <p>Conducted research on advanced user location prediction using generative AI models within Reconfigurable Intelligent Surface (RIS)-assisted 6G networks. This project was selected by Jazz 4G and presented at their national competition in Islamabad.</p>
+            <div class="pgrid-highlights">
+              <div class="pgrid-hl"><span class="pgrid-hl-val">Jazz 4G</span><span class="pgrid-hl-label">Selected</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">6G</span><span class="pgrid-hl-label">Research</span></div>
+              <div class="pgrid-hl"><span class="pgrid-hl-val">National</span><span class="pgrid-hl-label">Competition</span></div>
+            </div>
+            <div class="pgrid-tech"><span>Python</span><span>Generative AI</span><span>LSTM</span><span>GRU</span><span>6G/RIS</span></div>
+          </div>
+          <div class="pgrid-visual">
+            <div class="pgrid-code-block">
+              <div class="pgrid-code-header"><span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span><span class="pgrid-filename">ris_predictor.py</span></div>
+              <pre class="pgrid-pre"><code><span class="code-kw">import</span> torch.nn <span class="code-kw">as</span> nn
+
+<span class="code-kw">class</span> RISPredictor(nn.Module):
+    <span class="code-kw">def</span> __init__(self):
+        self.lstm = nn.LSTM(<span class="code-str">128</span>, <span class="code-str">64</span>)
+        self.gru  = nn.GRU(<span class="code-str">64</span>, <span class="code-str">32</span>)
+        self.fc   = nn.Linear(<span class="code-str">32</span>, <span class="code-str">3</span>)
+
+    <span class="code-kw">def</span> forward(self, ris_signal):
+        <span class="code-kw">return</span> self.fc(self.gru(x))</code></pre>
+            </div>
+            <div class="pgrid-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg> View on GitHub</div>
+          </div>
+        </a>
+
+      </div>
+      <div class="projects-cta">
+        <a href="https://github.com/AqSa2205?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+          View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <!-- Skills Terminal -->
+      <div class="skills-terminal">
+        <div class="skills-term-header">
+          <div class="skills-term-dots">
+            <span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span>
+          </div>
+          <div class="skills-term-tabs">
+            <span class="term-tab active">skills.json</span>
+            <span class="term-tab">config.yaml</span>
+          </div>
+        </div>
+        <div class="skills-term-cmd">
+          <span class="term-prompt">aqsa@ai-engineer</span><span class="term-path">~/skills</span><span class="term-dollar">$</span>
+          <span class="term-typed" id="skillsTyped"></span><span class="cursor-blink">|</span>
+        </div>
+        <div class="skills-term-body">
+
+          <!-- Skill Row -->
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-row-icon">{ }</span>
+              <h3>Languages</h3>
+              <span class="skill-row-count">6 technologies</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item" data-level="Expert"><span class="sb-name">Python</span><div class="sb-track"><div class="sb-fill" style="--fill: 95%; --delay: 0.1s"></div></div><span class="sb-pct">95%</span></div>
+              <div class="skill-bar-item" data-level="Expert"><span class="sb-name">JavaScript</span><div class="sb-track"><div class="sb-fill" style="--fill: 92%; --delay: 0.2s"></div></div><span class="sb-pct">92%</span></div>
+              <div class="skill-bar-item" data-level="Advanced"><span class="sb-name">Go (Golang)</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 80%; --delay: 0.3s"></div></div><span class="sb-pct">80%</span></div>
+              <div class="skill-bar-item" data-level="Advanced"><span class="sb-name">SQL</span><div class="sb-track"><div class="sb-fill" style="--fill: 85%; --delay: 0.4s"></div></div><span class="sb-pct">85%</span></div>
+              <div class="skill-bar-item" data-level="Proficient"><span class="sb-name">C/C++</span><div class="sb-track"><div class="sb-fill sb-pink" style="--fill: 70%; --delay: 0.5s"></div></div><span class="sb-pct">70%</span></div>
+              <div class="skill-bar-item" data-level="Proficient"><span class="sb-name">Java</span><div class="sb-track"><div class="sb-fill sb-pink" style="--fill: 65%; --delay: 0.6s"></div></div><span class="sb-pct">65%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-divider"></div>
+
+          <!-- AI/ML -->
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-row-icon">&#9672;</span>
+              <h3>AI / Machine Learning</h3>
+              <span class="skill-row-badge">Primary Focus</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item" data-level="Expert"><span class="sb-name">LangChain</span><div class="sb-track"><div class="sb-fill" style="--fill: 93%; --delay: 0.15s"></div></div><span class="sb-pct">93%</span></div>
+              <div class="skill-bar-item" data-level="Expert"><span class="sb-name">RAG Systems</span><div class="sb-track"><div class="sb-fill" style="--fill: 92%; --delay: 0.25s"></div></div><span class="sb-pct">92%</span></div>
+              <div class="skill-bar-item" data-level="Expert"><span class="sb-name">OpenAI / GPT</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 90%; --delay: 0.35s"></div></div><span class="sb-pct">90%</span></div>
+              <div class="skill-bar-item" data-level="Advanced"><span class="sb-name">Deep Learning</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 85%; --delay: 0.45s"></div></div><span class="sb-pct">85%</span></div>
+              <div class="skill-bar-item" data-level="Advanced"><span class="sb-name">AutoEncoders / VAEs</span><div class="sb-track"><div class="sb-fill sb-pink" style="--fill: 78%; --delay: 0.55s"></div></div><span class="sb-pct">78%</span></div>
+              <div class="skill-bar-item" data-level="Advanced"><span class="sb-name">Groq</span><div class="sb-track"><div class="sb-fill sb-pink" style="--fill: 75%; --delay: 0.65s"></div></div><span class="sb-pct">75%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-divider"></div>
+
+          <!-- Backend & Frontend split -->
+          <div class="skill-row-split">
+            <div class="skill-row">
+              <div class="skill-row-header">
+                <span class="skill-row-icon">&#9654;</span>
+                <h3>Backend</h3>
+              </div>
+              <div class="skill-bars">
+                <div class="skill-bar-item"><span class="sb-name">Node.js</span><div class="sb-track"><div class="sb-fill" style="--fill: 94%"></div></div><span class="sb-pct">94%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">NestJS</span><div class="sb-track"><div class="sb-fill" style="--fill: 85%"></div></div><span class="sb-pct">85%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">FastAPI</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 82%"></div></div><span class="sb-pct">82%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Express</span><div class="sb-track"><div class="sb-fill" style="--fill: 90%"></div></div><span class="sb-pct">90%</span></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-row-header">
+                <span class="skill-row-icon">&#9670;</span>
+                <h3>Frontend & Mobile</h3>
+              </div>
+              <div class="skill-bars">
+                <div class="skill-bar-item"><span class="sb-name">React.js</span><div class="sb-track"><div class="sb-fill" style="--fill: 88%"></div></div><span class="sb-pct">88%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Next.js</span><div class="sb-track"><div class="sb-fill" style="--fill: 85%"></div></div><span class="sb-pct">85%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Flutter</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 80%"></div></div><span class="sb-pct">80%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">HTML5/CSS3</span><div class="sb-track"><div class="sb-fill" style="--fill: 92%"></div></div><span class="sb-pct">92%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-divider"></div>
+
+          <!-- Databases & Tools split -->
+          <div class="skill-row-split">
+            <div class="skill-row">
+              <div class="skill-row-header">
+                <span class="skill-row-icon">&#9733;</span>
+                <h3>Databases</h3>
+              </div>
+              <div class="skill-bars">
+                <div class="skill-bar-item"><span class="sb-name">MongoDB</span><div class="sb-track"><div class="sb-fill" style="--fill: 92%"></div></div><span class="sb-pct">92%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">PostgreSQL</span><div class="sb-track"><div class="sb-fill" style="--fill: 88%"></div></div><span class="sb-pct">88%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Firebase</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 75%"></div></div><span class="sb-pct">75%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Pinecone</span><div class="sb-track"><div class="sb-fill sb-pink" style="--fill: 80%"></div></div><span class="sb-pct">80%</span></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-row-header">
+                <span class="skill-row-icon">&#9881;</span>
+                <h3>Tools & DevOps</h3>
+              </div>
+              <div class="skill-bars">
+                <div class="skill-bar-item"><span class="sb-name">Git / GitHub</span><div class="sb-track"><div class="sb-fill" style="--fill: 95%"></div></div><span class="sb-pct">95%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">Linux</span><div class="sb-track"><div class="sb-fill" style="--fill: 85%"></div></div><span class="sb-pct">85%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">FFmpeg</span><div class="sb-track"><div class="sb-fill sb-cyan" style="--fill: 78%"></div></div><span class="sb-pct">78%</span></div>
+                <div class="skill-bar-item"><span class="sb-name">JWT / OAuth</span><div class="sb-track"><div class="sb-fill" style="--fill: 88%"></div></div><span class="sb-pct">88%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Stats -->
+          <div class="skill-divider"></div>
+          <div class="skills-summary">
+            <div class="skills-sum-item">
+              <span class="skills-sum-val">28+</span>
+              <span class="skills-sum-label">Technologies</span>
+            </div>
+            <div class="skills-sum-item">
+              <span class="skills-sum-val">6</span>
+              <span class="skills-sum-label">Categories</span>
+            </div>
+            <div class="skills-sum-item">
+              <span class="skills-sum-val">4+</span>
+              <span class="skills-sum-label">Years Experience</span>
+            </div>
+            <div class="skills-sum-item">
+              <span class="skills-sum-val">AI/ML</span>
+              <span class="skills-sum-label">Core Specialty</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="skills-term-footer">
+          <span class="term-prompt">aqsa@ai-engineer</span><span class="term-path">~/skills</span><span class="term-dollar">$</span>
+          <span class="cursor-blink">|</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-cards">
+
+        <!-- MSc Card -->
+        <div class="edu-card-new">
+          <div class="edu-bg-pattern edu-bg-purple"></div>
+          <div class="edu-card-inner">
+            <div class="edu-left">
+              <div class="edu-crest">
+                <div class="edu-crest-ring">
+                  <div class="edu-crest-inner">
+                    <span class="edu-monogram">UoH</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="edu-right">
+              <div class="edu-top-row">
+                <span class="edu-badge-new completed">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
+                  Completed
+                </span>
+                <span class="edu-year-pill">2024 — 2025</span>
+              </div>
+              <h3>MSc in Artificial Intelligence</h3>
+              <p class="edu-uni-name">University of Huddersfield</p>
+              <p class="edu-location-new">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Huddersfield, United Kingdom
+              </p>
+              <div class="edu-focus-tags">
+                <span>Deep Learning</span>
+                <span>NLP</span>
+                <span>Computer Vision</span>
+                <span>AI Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="edu-connector">
+          <div class="edu-conn-line"></div>
+          <div class="edu-conn-dot"></div>
+          <div class="edu-conn-line"></div>
+        </div>
+
+        <!-- BS Card -->
+        <div class="edu-card-new">
+          <div class="edu-bg-pattern edu-bg-cyan"></div>
+          <div class="edu-card-inner">
+            <div class="edu-left">
+              <div class="edu-crest">
+                <div class="edu-crest-ring crest-cyan">
+                  <div class="edu-crest-inner">
+                    <span class="edu-monogram">FAST</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="edu-right">
+              <div class="edu-top-row">
+                <span class="edu-badge-new completed">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
+                  Completed
+                </span>
+                <span class="edu-year-pill">2020 — 2024</span>
+              </div>
+              <h3>BS in Software Engineering</h3>
+              <p class="edu-uni-name">FAST-NUCES (National University)</p>
+              <p class="edu-location-new">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Karachi, Pakistan
+              </p>
+              <div class="edu-focus-tags">
+                <span>Software Engineering</span>
+                <span>Data Structures</span>
+                <span>Databases</span>
+                <span>OOP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section section-alt" id="certifications">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Full Stack Web Development Bootcamp</h3>
+          <p>Angela Yu — Udemy</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Complete React Developer</h3>
+          <p>Zero to Mastery (ZTM)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-divider-glow"></div>
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+
+      <div class="contact-terminal">
+        <!-- Terminal Header -->
+        <div class="contact-term-header">
+          <div class="skills-term-dots"><span class="pdot red"></span><span class="pdot yellow"></span><span class="pdot green"></span></div>
+          <div class="skills-term-tabs"><span class="term-tab active">connect.sh</span></div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="contact-term-body">
+          <div class="contact-term-cmd">
+            <span class="term-prompt">aqsa@ai-engineer</span><span class="term-path">~/contact</span><span class="term-dollar">$</span>
+            <span class="term-typed" id="contactTyped"></span><span class="cursor-blink">|</span>
+          </div>
+
+          <!-- Output Area -->
+          <div class="contact-output">
+            <div class="contact-output-line">
+              <span class="co-comment">// Ready to collaborate? Let's build something intelligent.</span>
+            </div>
+            <div class="contact-output-line">
+              <span class="co-comment">// Available for: AI projects, full-stack roles, research partnerships</span>
+            </div>
+            <br>
+            <div class="contact-output-line">
+              <span class="co-key">const</span> <span class="co-var">channels</span> = {
+            </div>
+
+            <!-- Email -->
+            <a href="mailto:aqsa2205@gmail.com" class="contact-channel">
+              <div class="cc-icon-wrap cc-email">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+              </div>
+              <div class="cc-info">
+                <span class="cc-label">email:</span>
+                <span class="cc-value">aqsa2205@gmail.com</span>
+              </div>
+              <div class="cc-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+              <div class="cc-status">
+                <span class="cc-dot cc-dot-green"></span>
+                <span>Preferred</span>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/AqSa2205" target="_blank" rel="noopener" class="contact-channel">
+              <div class="cc-icon-wrap cc-github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="cc-info">
+                <span class="cc-label">github:</span>
+                <span class="cc-value">AqSa2205</span>
+              </div>
+              <div class="cc-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+              <div class="cc-status">
+                <span class="cc-dot cc-dot-green"></span>
+                <span>19 repos</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/aqsa-ahmed-a906ab29b/" target="_blank" rel="noopener" class="contact-channel">
+              <div class="cc-icon-wrap cc-linkedin">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="cc-info">
+                <span class="cc-label">linkedin:</span>
+                <span class="cc-value">aqsa-ahmed</span>
+              </div>
+              <div class="cc-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+              <div class="cc-status">
+                <span class="cc-dot cc-dot-blue"></span>
+                <span>Connect</span>
+              </div>
+            </a>
+
+            <div class="contact-output-line">
+              <span class="co-key">}</span>
+            </div>
+
+            <br>
+            <div class="contact-output-line">
+              <span class="co-success">&#10003; All channels active. Response time: &lt; 24 hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Footer -->
+        <div class="skills-term-footer">
+          <span class="term-prompt">aqsa@ai-engineer</span><span class="term-path">~/contact</span><span class="term-dollar">$</span>
+          <span class="cursor-blink">|</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Aqsa Ahmed. Built with passion and clean code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
